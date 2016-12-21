@@ -65,6 +65,7 @@ body {
     margin: auto;
 }
 
+
 .goods-list-item {
     margin-top: 40px;
 }
@@ -115,6 +116,7 @@ body {
     text-align: right;
     margin-right: 55px;
     position: relative;
+    line-height: 28px;
 }
 
 .contact-form-container span:after{
@@ -225,13 +227,17 @@ footer p{
 }
 
 .about__list{
-    margin-top: -10px;
+    margin-top: 195px;
     margin-bottom: 160px;
+    padding: 0 40px;
+    padding-bottom: 100px;
+    background: #222;
 }
+
 
 .about__list-items{
     background: #222;
-    padding: 100px 50px;
+    margin-top: -100px;
 }
 
 .about__list-items p{
@@ -243,9 +249,8 @@ footer p{
 
 .about__images{
     position: relative;
-    bottom: -100px;
+    bottom: 100px;
     text-align: center;
-    padding: 0 50px;
 }
 
 .about__images img{
@@ -258,6 +263,18 @@ footer p{
 
 .contacts{
     margin-top: 85px;
+    padding: 65px 0 85px;
+    font-size: 0;
+    position: relative;
+}
+
+.contacts-inner{
+    width: 83%;
+    height: 500px;
+    position: absolute;
+    right: 0;
+    background: #222;
+    top: 0;
 }
 
 .contact-list{
@@ -333,3 +350,143 @@ footer p{
 .logo-contacts{
     text-align: right;
 }
+
+
+            /*==========ADAPTIVE==========*/
+
+@media screen and (max-width: 991px){
+    
+    .contacts-inner{
+        width: 75%;
+        height: 765px;
+    }
+    
+    .contact-list{
+        float: right;
+        margin-right: 25px;
+    }
+    
+    .logo-contacts{
+        text-align: center;
+        margin-right: 0;
+    }
+    
+    .contact-form-image{
+        margin-right: 0;
+    }
+    
+    .contact-form-container p{
+        text-align: center;
+        margin-right: 0;
+        margin-top: 0;
+    }
+    
+    .contact-form-container span{
+        text-align: center;
+        margin-right: 0;
+        margin: 20px 0;
+    }
+    
+    .contact-form-container span::after{
+        content: '';
+        background: none;
+        width: 0;
+    }
+    
+    .contact-form{
+        margin: 0 auto;
+    }
+    
+    .about__list{
+        padding: 0 20px;
+        margin-top: 0;
+        margin-bottom: 100px;
+        background-color: transparent;
+    }
+    
+    .about__list-items{
+        background: #222;
+        margin-top: -100px;
+        padding-top: 100px;
+        padding-bottom: 25px;
+    }
+    
+    .about__list-item{
+        margin-top: 50px;
+    }
+    
+    .about__images{
+        bottom: 0;
+    }
+}
+
+
+
+@media screen and (max-width: 767px){
+    .main-menu{
+        padding: 0 10px;
+    }    
+    
+    .menu{
+        border-radius: 30px;
+        margin-top: 85px;
+    }
+    
+    .menu::before{
+        content: '';
+        left: 0;
+        top: -60px;
+        right: 0;
+        margin: auto;
+    }
+    
+    .contacts-inner{
+        width: 100%;
+        height: 775px;
+    }
+    
+    .header p{
+        margin-top: 15px;
+    }
+    
+    .contact-form{
+        padding: 15px;
+        margin: 15px;
+        padding-bottom: 37px;
+        margin: 15px auto;
+    }
+    
+    .contact-form-image{
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .contacts{
+        margin-top: 35px;
+        padding-bottom: 15px;
+    }
+    
+    
+    .about__logo{
+        margin-top: 30px;
+    }
+    
+    .about__logo img{
+        width: 100%;
+    }
+    
+    .about p{
+        margin-top: 35px;
+        font-size: 18px;
+        line-height: 22px;
+    }
+    
+    .about__list{
+        padding: 0;
+        margin-bottom: 50px;
+    }
+    
+    
+}
+
+
