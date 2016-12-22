@@ -7,6 +7,12 @@ body {
 .header-main {
     background: url(../img/main_page_background.jpg) no-repeat;
     height: 760px;
+    overflow: hidden;
+    padding: 0;
+}
+
+video {
+    width: 100%;
 }
 
 .main-menu {
@@ -19,7 +25,9 @@ body {
     display: flex;
     justify-content: space-around;
     padding: 0 60px;
-    position: relative;
+    position: absolute;
+    right: 0;
+    left: 0;
 }
 
 .main-menu li {
@@ -44,15 +52,21 @@ body {
     text-decoration: none;
 }
 
+.back_to_main {
+    width: 85px;
+    height: 60px;
+    position: absolute;
+    left: -50px;
+    bottom: 0;
+    background: transparent;
+}
+
 .logo-block {
     text-align: center;
     margin-top: 155px;
-}
-
-.logo-block h1 {
-    font-size: 30px;
-    color: #c3c1bf;
-    margin: 30px 0 38px;
+    position: absolute;
+    right: 0;
+    left: 0;
 }
 
 .logo-block:after {
@@ -65,16 +79,47 @@ body {
     margin: auto;
 }
 
+.logo-block h1 {
+    font-size: 30px;
+    color: #c3c1bf;
+    margin: 30px 0 38px;
+}
+
+.goods-list {
+    position: relative;
+    padding-top: 25px;
+    padding-bottom: 95px;
+}
+
+.list-background {
+    width: 82%;
+    background: #222;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
 
 .goods-list-item {
     margin-top: 40px;
+    position: relative;
+}
+
+.goods-list-item:after {
+    content: '';
+    width: 400px;
+    height: 1px;
+    background: #444;
+    position: absolute;
+    bottom: 0;
+    right: 160px;
 }
 
 .goods-list-img img {
     max-width: 530px;
     -webkit-box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow:    0px 0px 15px 3px rgba(0, 0, 0, 0.75);
-    box-shadow:         0px 0px 15px 3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.75);
 }
 
 .main-description p {
@@ -95,14 +140,15 @@ body {
     font-size: 20px;
     line-height: 28px;
     color: #c3c1bf;
+    padding-right: 20px;
 }
 
-.contact-form-container{
+.contact-form-container {
     margin-top: 92px;
     margin-bottom: 70px;
 }
 
-.contact-form-container p{
+.contact-form-container p {
     font-size: 25px;
     line-height: 30px;
     text-align: right;
@@ -110,7 +156,7 @@ body {
     margin-right: 55px;
 }
 
-.contact-form-container span{
+.contact-form-container span {
     display: block;
     font-size: 30px;
     text-align: right;
@@ -119,22 +165,22 @@ body {
     line-height: 28px;
 }
 
-.contact-form-container span:after{
+.contact-form-container span:after {
     content: '';
     background: url(../img/arrow.png) no-repeat;
     position: absolute;
     width: 103px;
     height: 49px;
     top: 38px;
- }
+}
 
-.contact-form{
+.contact-form {
     max-width: 450px;
     border: 1px solid #222;
     padding: 22px 45px 44px;
 }
 
-.contact-form input{
+.contact-form input {
     width: 100%;
     height: 50px;
     display: block;
@@ -152,32 +198,32 @@ body {
     border: 0;
     letter-spacing: 1px;
     -webkit-box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow:    0px 0px 15px 3px rgba(0, 0, 0, 0.75);
-    box-shadow:         0px 0px 15px 3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.75);
     transition: .2s;
 }
 
-.contact-form input[type="submit"]:hover{
+.contact-form input[type="submit"]:hover {
     background: #555;
 }
 
-footer{
+footer {
     width: 100%;
     height: 200px;
     background: #222;
     border-top: 1px solid transparent;
 }
 
-.footer-logo{
+.footer-logo {
     margin-top: 45px;
     text-align: center;
 }
 
-.footer-logo img{
+.footer-logo img {
     width: 200px;
 }
 
-footer p{
+footer p {
     text-align: center;
     font-size: 17px;
     color: #c3bfbf;
@@ -185,26 +231,25 @@ footer p{
 }
 
 
-
 /*================ABOUT US================*/
 
-.header{
+.header {
     background: url(../img/main_page_background.jpg) no-repeat;
     height: 240px;
 }
 
-.header p{
+.header p {
     text-align: center;
     font-size: 30px;
     color: #c3c0bf;
     margin-top: 43px;
 }
 
-.menu{
-     border-top-left-radius: 0;
+.menu {
+    border-top-left-radius: 0;
 }
 
-.menu:before{
+.menu:before {
     content: '';
     background: url(../img/header-menu-logo.svg) no-repeat;
     width: 82px;
@@ -213,12 +258,12 @@ footer p{
     left: -50px;
 }
 
-.about__logo{
+.about__logo {
     text-align: center;
     margin-top: 85px;
 }
 
-.about p{
+.about p {
     font-size: 20px;
     line-height: 24px;
     color: #c3c1bf;
@@ -226,7 +271,7 @@ footer p{
     text-align: center;
 }
 
-.about__list{
+.about__list {
     margin-top: 195px;
     margin-bottom: 160px;
     padding: 0 40px;
@@ -234,41 +279,39 @@ footer p{
     background: #222;
 }
 
-
-.about__list-items{
+.about__list-items {
     background: #222;
     margin-top: -100px;
 }
 
-.about__list-items p{
+.about__list-items p {
     font-size: 17px;
     line-height: 24px;
     text-align: left;
-    padding: 0 25px; 
+    padding: 0 25px;
 }
 
-.about__images{
+.about__images {
     position: relative;
     bottom: 100px;
     text-align: center;
 }
 
-.about__images img{
+.about__images img {
     border-radius: 50%;
     -webkit-box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow:    0px 0px 15px 3px rgba(0, 0, 0, 0.75);
-    box-shadow:         0px 0px 15px 3px rgba(0, 0, 0, 0.75);
-    
+    -moz-box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.75);
 }
 
-.contacts{
+.contacts {
     margin-top: 85px;
     padding: 65px 0 85px;
     font-size: 0;
     position: relative;
 }
 
-.contacts-inner{
+.contacts-inner {
     width: 83%;
     height: 500px;
     position: absolute;
@@ -277,11 +320,11 @@ footer p{
     top: 0;
 }
 
-.contact-list{
+.contact-list {
     margin-top: 25px;
 }
 
-.contact-list li{
+.contact-list li {
     list-style: none;
     font-size: 25px;
     line-height: 30px;
@@ -293,200 +336,176 @@ footer p{
 .adress:before {
     content: '';
     background: url(../img/contacts_sprite.png) no-repeat 0 0;
-	width: 40px;
-	height: 40px;
+    width: 40px;
+    height: 40px;
     position: absolute;
     left: -60px;
     top: -3px;
 }
 
-.email:before{
+.email:before {
     content: '';
     background: url(../img/contacts_sprite.png) no-repeat -43px 0;
-	width: 40px;
-	height: 40px;
+    width: 40px;
+    height: 40px;
     position: absolute;
     left: -60px;
     top: -3px;
 }
 
-.phone-1:before{
-     content: '';
+.phone-1:before {
+    content: '';
     background: url(../img/contacts_sprite.png) no-repeat -86px 0;
-	width: 40px;
-	height: 40px;
+    width: 40px;
+    height: 40px;
     position: absolute;
     left: -60px;
     top: -3px;
 }
 
-.phone-2:before{
-     content: '';
+.phone-2:before {
+    content: '';
     background: url(../img/contacts_sprite.png) no-repeat -129px 0;
-	width: 40px;
-	height: 40px;
+    width: 40px;
+    height: 40px;
     position: absolute;
     left: -60px;
     top: -3px;
 }
 
-.phone-3:before{
-     content: '';
+.phone-3:before {
+    content: '';
     background: url(../img/contacts_sprite.png) no-repeat -172px 0;
-	width: 40px;
-	height: 40px;
+    width: 40px;
+    height: 40px;
     position: absolute;
     left: -60px;
     top: -3px;
 }
 
-.contact-form-image{
+.contact-form-image {
     width: 300px;
     margin-right: 55px;
     position: relative;
     bottom: 40px;
 }
 
-.logo-contacts{
+.logo-contacts {
     text-align: right;
 }
 
 
-            /*==========ADAPTIVE==========*/
+/*==========ADAPTIVE==========*/
 
-@media screen and (max-width: 991px){
-    
-    .contacts-inner{
+@media screen and (max-width: 991px) {
+    .contacts-inner {
         width: 75%;
         height: 765px;
     }
-    
-    .contact-list{
+    .contact-list {
         float: right;
         margin-right: 25px;
     }
-    
-    .logo-contacts{
+    .logo-contacts {
         text-align: center;
         margin-right: 0;
     }
-    
-    .contact-form-image{
+    .contact-form-image {
         margin-right: 0;
     }
-    
-    .contact-form-container p{
+    .contact-form-container p {
         text-align: center;
         margin-right: 0;
         margin-top: 0;
     }
-    
-    .contact-form-container span{
+    .contact-form-container span {
         text-align: center;
         margin-right: 0;
         margin: 20px 0;
     }
-    
-    .contact-form-container span::after{
+    .contact-form-container span::after {
         content: '';
         background: none;
         width: 0;
     }
-    
-    .contact-form{
+    .contact-form {
         margin: 0 auto;
     }
-    
-    .about__list{
+    .about__list {
         padding: 0 20px;
         margin-top: 0;
         margin-bottom: 100px;
         background-color: transparent;
     }
-    
-    .about__list-items{
+    .about__list-items {
         background: #222;
         margin-top: -100px;
         padding-top: 100px;
         padding-bottom: 25px;
     }
-    
-    .about__list-item{
+    .about__list-item {
         margin-top: 50px;
     }
-    
-    .about__images{
+    .about__images {
         bottom: 0;
     }
 }
 
-
-
-@media screen and (max-width: 767px){
-    .main-menu{
+@media screen and (max-width: 767px) {
+    .main-menu {
         padding: 0 10px;
-    }    
-    
-    .menu{
+        position: relative;
+    }
+    .menu {
         border-radius: 30px;
         margin-top: 85px;
     }
-    
-    .menu::before{
+    .menu::before {
         content: '';
         left: 0;
         top: -60px;
         right: 0;
         margin: auto;
     }
-    
-    .contacts-inner{
+    .contacts-inner {
         width: 100%;
         height: 775px;
     }
-    
-    .header p{
+    .header p {
         margin-top: 15px;
     }
-    
-    .contact-form{
+    .contact-form {
         padding: 15px;
         margin: 15px;
         padding-bottom: 37px;
         margin: 15px auto;
     }
-    
-    .contact-form-image{
+    .contact-form-image {
         width: 100%;
         max-width: 300px;
     }
-    
-    .contacts{
+    .contacts {
         margin-top: 35px;
         padding-bottom: 15px;
     }
-    
-    
-    .about__logo{
+    .about__logo {
         margin-top: 30px;
     }
-    
-    .about__logo img{
+    .about__logo img {
         width: 100%;
     }
-    
-    .about p{
+    .about p {
         margin-top: 35px;
         font-size: 18px;
         line-height: 22px;
     }
-    
-    .about__list{
+    .about__list {
         padding: 0;
         margin-bottom: 50px;
     }
     
-    
+    .back_to_main{
+        left: 95px;
+        bottom: 60px;
+    }
 }
-
-
